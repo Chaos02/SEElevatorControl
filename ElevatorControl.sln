@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElevatorControl", "ElevatorControl.csproj", "{0F7D7E94-D56B-49AC-82E6-A1C8FC02C789}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F7D7E94-D56B-49AC-82E6-A1C8FC02C789}.Debug|x64.ActiveCfg = Debug|x64
+		{0F7D7E94-D56B-49AC-82E6-A1C8FC02C789}.Debug|x64.Build.0 = Debug|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42370126-1699-4527-B327-394B21975ACE}
+	EndGlobalSection
+EndGlobal
