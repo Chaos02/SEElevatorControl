@@ -1,5 +1,32 @@
-﻿R e a d m e
------------
+﻿Chaos02's CraneElevatorScript [CES]
+===================================
 
-In this file you can include any instructions or other comments you want to have injected onto the 
-top of your final script. You can safely delete this file if you do not want any such comments.
+Installation:
+	  1. Before running the script please move the 'crane head' to the home position. It will be saved internally.
+	  2. Now copy this script into the programmable block!
+	  3. Change the >axis letter< (Mode) below the the corresponding axis, this programmable block is meant to control on the crane.
+	  4. Also make sure that the ID of one crane system matches.
+	  5. After setting up, go into <CustomData> of this programmable block and
+	  6. Configure, which positions you have set up and which of those should be considered the [EXIT].
+
+	  The Position format: (valid for [TARGET], [EXIT])
+		  Positions consist of 1 Letter (Center/Front/Back/Left/Right) and a (also negative) number, which can have multiple numerals.
+		  The Number corresponds to the floor level, whereas the letter corresponds to the horizontal position of the head.
+		  'Center' is considered to be on the Z-axis cart.
+
+		  Examples: 'C01', 'F-2', 'R10', 'C-12'
+		  This format will change in a future update to a coordinate system approach like '(1|-1|4)' (X|Y|Z)
+
+Usage:
+	 To control the crane, please set up button panels on any of the grids, this programmable block is installed on.
+	 As an action, select "Run with argument" and type in one of the following:
+		  M[]			  (Move)				Moves the 'crane head' to [TARGET].
+		  S[]			  (Store)			Tries to grab the object at the current position and sets it down at [TARGET].
+		  R[]			  (Retrieve)		Tries to grab the object at [TARGET] and moves it to [EXIT]. Manually let go.
+		  G			  (Grab)				Tries to grab the object at the current position.
+		  L			  (Let go)			Sets down the currently held object.
+	...where the square brackets correspond to [TARGET] (, the position and floor level you are targeting).
+	(See above)
+
+	Do NOT move the crane head manually after setting up this script. It can only work if it can track it's movements from the 'C0' (Home) position!
+	Should there be the need, the script will listen to the 'STOP' argument, aswell as 'RESET', which will both stop all actions immediately.
